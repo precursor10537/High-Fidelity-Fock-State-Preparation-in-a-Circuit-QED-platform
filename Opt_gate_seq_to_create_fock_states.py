@@ -403,7 +403,6 @@ print("Please enter 'Fock state n' and 'Berry Phase (theta factor to be multipli
 n_SNAP=int(input('|n>: '))
 theta_SNAP=float(input('theta: '))
 theta_SNAP=theta_SNAP*(math.pi)
-#Complementing the alpha1 and aplha2 for the gate sequence to work
 #Plotting UNOPTIMIZED initial gate sequence
 psi_initial=vac(N)
 #D(N,alpha) SNAP(N,theta_SNAP,n_SNAP)
@@ -423,7 +422,9 @@ print('\n')
 #Defining Infidelity as Cost function of (alpha1,(n,theta),alpha2) and its minimization
 print("Please enter 'n' to create the Target Fock state to minimize the Cost function and to approximate the optimal parameters:")
 n_target=int(input("|n_target>: "))
-psi_target=fock(N,n_target) 
+psi_target=fock(N,n_target)
+print("You will now have to decide the tolerances [f_tol and x_tol; g_tol has been disabled] for optimization")
+print("Please make sure that at least one tolerance is higher than the 'machine epsilon'") 
 print("Do you want to set a custom tolerance rate for the cost function [f_tol] (Y/N)? [DEFAULT: 1e-08]")
 cf_tol=f_tol()
 #print(cf_tol)
