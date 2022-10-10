@@ -139,7 +139,7 @@ def fidelity_cf(N,psi_target,x): #1-(tr(sqrt(sqrt(rho)*sigma*sqrt(rho))))^2
     #print("Fidelity:%f"%(fidelity))
     return fidelity
 
-def guess_enumeration(n_target,alpha_1,alpha_2,n_SNAP):
+def guess_enumeration(n_target,alpha_1,alpha_2,n_SNAP): #Based on the generalized output derived for D(alpha2)*SNAP(n,theta)*D(alpha1)*|n> gate sequence
     if n_target-1>0: 
         n_SNAP_enumeration=[n_SNAP,n_target-1,n_target,n_target+1]
     if n_target-1<=0:
@@ -479,7 +479,7 @@ else:
         for j in alpha_enumeration:
             x0=np.array([j[0].real,j[0].imag,float(theta_SNAP),int(i),j[1].real,j[1].imag])
             j_counter=j_counter+1
-            result=least_squares(infidelity_cf,x0,ftol=cf_tol,xtol=cx_tol,gtol=None,max_nfev=25)
+            result=least_squares(infidelity_cf,x0,ftol=cf_tol,xtol=cx_tol,gtol=None,max_nfev=50)
             result_dict[("%d,%d"%(i,j_counter))]=[x0,result] #Archive
             if result['fun'][0]<implicit_infidelity:
                 result_list.append([x0,result]) #Store only relevant outputs
