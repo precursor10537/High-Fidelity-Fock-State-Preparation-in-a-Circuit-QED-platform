@@ -30,11 +30,17 @@ to perform the Poissonian fitting. Following figure shows the results we obtaine
 The Poissonian fitting followed by the Gaussian fitting of the binned data resulted in a lookup table with correspondence between Voltage (Vin) and the Displacement α
 Table 1: Lookup Table
 Vin(V) ---> α
+
  0.0   ---> 0.100
- 0.1   ---> 0.223
- 0.2   ---> 0.561
- 0.3   ---> 1.135
- 0.4   ---> 1.923
+
+0.1   ---> 0.223
+
+0.2   ---> 0.561
+
+0.3   ---> 1.135
+
+0.4   ---> 1.923
+
 To validate, our results, we implemented the D(α2) SNAP (n,θ)D(α1) |0⟩ gate sequence with Vin1 = 0.3 V,θ = π, |n⟩ = |0⟩, Vin2 = −0.152 V in our CQED setup. The applied gate sequence is expected to yield a Fock state |1⟩. 
 We performed Wigner Tomography to confirm the same. The output indicated Fock state |1⟩ characterized by its distinctive negativity in the Wigner function.
 Assuming a linear relationship to hold between the parameters in Table 1, Vin,1 = 0.3 V will correspond to α1 = 1.135 and Vin,2 = −0.152 V will corresponds to α2 = −0.336. We validated the accuracy of the lookup table
