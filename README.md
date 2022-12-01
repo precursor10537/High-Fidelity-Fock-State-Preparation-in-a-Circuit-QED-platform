@@ -57,4 +57,4 @@ The gtol parameter has been disabled by default as it causes the optimization to
 Sample:
 Input(s) 𝛼1=2, 𝛼2=1, 𝜃=0.5𝜋, 𝑛=0;
 Output(s): 𝛼1=−1.14, 𝛼2=0.58, 𝜃=𝜋, 𝑛=0; Fidelity: 0.981;
-𝛼1=1.14, 𝛼2=−0.58, 𝜃=𝜋, 𝑛=0; Fidelity: 0.981
+𝛼1=1.14, 𝛼2=−0.58, 𝜃=𝜋, 𝑛=0; Fidelity: 0.981. For the obtained optimized gate sequence parameters, we can apply the corresponding input voltags to create an optimized fock state in the cQED setup. 
